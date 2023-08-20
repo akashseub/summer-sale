@@ -21,32 +21,44 @@ document.getElementById('kitchenware-item3').addEventListener('click', function 
 
 document.getElementById('sportswear-item1').addEventListener('click', function () {
     const itemText = document.getElementById('sportswear-item1-text').innerText;
+    const itemAmount = parseFloat(document.getElementById('sportswear-item1-amount').innerText);
     addItemOnList(itemText);
+    addAmountOnTotalPrice(itemAmount);
 });
 
 document.getElementById('sportswear-item2').addEventListener('click', function () {
     const itemText = document.getElementById('sportswear-item2-text').innerText;
+    const itemAmount = parseFloat(document.getElementById('sportswear-item2-amount').innerText);
     addItemOnList(itemText);
+    addAmountOnTotalPrice(itemAmount);
 });
 
 document.getElementById('sportswear-item3').addEventListener('click', function () {
     const itemText = document.getElementById('sportswear-item3-text').innerText;
+    const itemAmount = parseFloat(document.getElementById('sportswear-item3-amount').innerText);
     addItemOnList(itemText);
+    addAmountOnTotalPrice(itemAmount);
 });
 
 document.getElementById('furniture-item1').addEventListener('click', function () {
     const itemText = document.getElementById('furniture-item1-text').innerText;
+    const itemAmount = parseFloat(document.getElementById('furniture-item1-amount').innerText);
     addItemOnList(itemText);
+    addAmountOnTotalPrice(itemAmount);
 });
 
 document.getElementById('furniture-item2').addEventListener('click', function () {
     const itemText = document.getElementById('furniture-item2-text').innerText;
+    const itemAmount = parseFloat(document.getElementById('furniture-item2-amount').innerText);
     addItemOnList(itemText);
+    addAmountOnTotalPrice(itemAmount);
 });
 
 document.getElementById('furniture-item3').addEventListener('click', function () {
     const itemText = document.getElementById('furniture-item3-text').innerText;
+    const itemAmount = parseFloat(document.getElementById('furniture-item3-amount').innerText);
     addItemOnList(itemText);
+    addAmountOnTotalPrice(itemAmount);
 });
 
 function addItemOnList(data) {
