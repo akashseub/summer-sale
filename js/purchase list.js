@@ -75,8 +75,6 @@ function addAmountOnTotalPrice(data) {
     document.getElementById('total-price').innerText = totalPrice;
     if (totalPrice > 0) {
         document.getElementById('makePurchaseBtn').removeAttribute('disabled');
-    // } else{
-    //     document.getElementById('makePurchaseBtn').setAttribute('disabled', true);
     }
 }
 
