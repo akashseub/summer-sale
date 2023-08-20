@@ -75,6 +75,8 @@ function addAmountOnTotalPrice(data) {
     document.getElementById('total-price').innerText = totalPrice;
     if (totalPrice > 0) {
         document.getElementById('makePurchaseBtn').removeAttribute('disabled');
+    // } else{
+    //     document.getElementById('makePurchaseBtn').setAttribute('disabled', true);
     }
 }
 
@@ -102,5 +104,8 @@ document.getElementById('close-btn').addEventListener('click', function(){
     document.getElementById('discount-amount').innerText = '00.00';
     document.getElementById('total-amount').innerText = '00.00';
     document.getElementById('items-list').innerText = '';
+    document.getElementById('makePurchaseBtn').setAttribute('disabled', true);
+    document.getElementById('coupon-field').value = '';
+    document.getElementById('coupon-apply-button').setAttribute('disabled', true);
 });
 
