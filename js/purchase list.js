@@ -92,7 +92,7 @@ document.getElementById('coupon-apply-button').addEventListener('click', functio
     if (totalPrice >= 200) {
         const totalDiscountAmount = (totalPrice * .2).toFixed('2');
         document.getElementById('discount-amount').innerText = totalDiscountAmount;
-        const finalAmount = totalPrice - totalDiscountAmount;
+        const finalAmount = (totalPrice - totalDiscountAmount).toFixed(2);
         document.getElementById('total-amount').innerText = finalAmount;
     } 
 });
