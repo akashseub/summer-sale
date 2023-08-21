@@ -76,16 +76,13 @@ function addAmountOnTotalPrice(data) {
     if (totalPrice > 0) {
         document.getElementById('makePurchaseBtn').removeAttribute('disabled');
     }
-}
-
-document.getElementById('coupon-field').addEventListener('keyup', function (event) {
-    const couponFieldValue = event.target.value;
-    if (couponFieldValue === 'SELL200') {
+    
+    if (totalPrice >= 200) {
         document.getElementById('coupon-apply-button').removeAttribute('disabled');
     } else {
         document.getElementById('coupon-apply-button').setAttribute('disabled', true);
     }
-})
+}
 
 document.getElementById('coupon-apply-button').addEventListener('click', function () {
     const totalPrice = document.getElementById('total-price').innerText;
@@ -94,10 +91,10 @@ document.getElementById('coupon-apply-button').addEventListener('click', functio
         document.getElementById('discount-amount').innerText = totalDiscountAmount;
         const finalAmount = (totalPrice - totalDiscountAmount).toFixed(2);
         document.getElementById('total-amount').innerText = finalAmount;
-    } 
+    }
 });
 
-document.getElementById('close-btn').addEventListener('click', function(){
+document.getElementById('close-btn').addEventListener('click', function () {
     document.getElementById('total-price').innerText = '00.00';
     document.getElementById('discount-amount').innerText = '00.00';
     document.getElementById('total-amount').innerText = '00.00';
